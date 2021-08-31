@@ -1,0 +1,21 @@
+class Country {
+  constructor(name) {
+    this.brand = name;
+  }
+
+  present() {
+    return 'I have a ' + this.brand;
+  }
+}
+
+class Model extends Country {
+  constructor(name, mod) {
+    super(name);
+    this.model = mod;
+  }  
+  show() {
+      return this.present() + ', it is a ' + this.model
+  }
+}
+myCountry = new Model("Ford", "Mustang");
+myCountry.show();
